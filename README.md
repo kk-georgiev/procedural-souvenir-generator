@@ -68,17 +68,18 @@ Points are generated on a grid fitted inside the base circle. Each point gets a 
 
 ## Usage
 
-1. Place both files in the correct locations
-2. In AutoCAD, load the script:
+1. Copy the .lsp file anywhere convenient
+2. Copy the .DCL file to `C:/VLISP/DCL/` and rename it to `souvenir_generator.DCL` (the script expects this exact path and filename)
+3. In AutoCAD, load the script:
    ```
    (load "C:/path/to/souvenir_generator.lsp")
    ```
-3. Run the command:
+4. Run the command:
    ```
    souvenir_generator
    ```
-4. In the dialog — enter a base diameter (250–500 mm) and select a theme
-5. The model generates automatically in the current drawing
+5. In the dialog — enter a base diameter (250–500 mm) and select a theme
+6. The model generates automatically in the current drawing
 
 ## Dialog
 
