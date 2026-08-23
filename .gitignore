@@ -1,0 +1,12 @@
+# AutoCAD temporary and backup files
+*.bak
+*.dwl
+*.dwl2
+*.sv$
+*.ac$
+*.err
+*.tmp
+
+# AutoCAD Trusted Locations cache
+*.lin~
+*.pat~
