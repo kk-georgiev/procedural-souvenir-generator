@@ -10,12 +10,32 @@ The user selects a size and a theme through a dialog box. The script then genera
 
 - **Dialog-driven UI** (DCL) — size input + theme selection
 - **Two themes:**
-  - 🌲 *Silent Forest* — randomized trees, rocks, and flowers scattered across the base
-  - 🏙️ *Modern City* — grid-placed skyscrapers with procedurally generated windows
+  -  *Silent Forest* — randomized trees, rocks, and flowers scattered across the base
+  -  *Modern City* — grid-placed skyscrapers with procedurally generated windows
 - **Custom LCG random number generator** — seeded from system date/time and last cursor position, ensuring a unique result every run
 - **Non-overlapping placement** — objects are placed with minimum distance checks to avoid clipping
 - **Parametric scaling** — all geometry scales proportionally based on the chosen base diameter (250–500 mm)
 - **Automatic environment setup** — switches to SW Isometric view, Shades of Grey visual style, disables grid/snapping
+
+## Gallery
+
+### Silent Forest theme
+| Min diameter (250mm) | Max diameter (500mm) |
+|---|---|
+| ![Forest min](renders/forest-min.png) | ![Forest max](renders/forest-max.png) |
+
+Side-by-side comparison:
+
+![Forest comparison](renders/forest-comparison.png)
+
+### Modern City theme
+| Min diameter (250mm) | Max diameter (500mm) |
+|---|---|
+| ![City min](renders/city-min.png) | ![City max](renders/city-max.png) |
+
+Side-by-side comparison:
+
+![City comparison](renders/city-comparison.png)
 
 ## How It Works
 
@@ -37,25 +57,25 @@ Points are generated on a grid fitted inside the base circle. Each point gets a 
 ## Files
 
 ```
-├── PROJECT.lsp   # Main script — all geometry and logic
-└── PROJECT.DCL   # Dialog definition — UI for user input
+├── souvenir_generator.lsp   # Main script — all geometry and logic
+└── souvenir_generator.DCL   # Dialog definition — UI for user input
 ```
 
 ## Requirements
 
 - AutoCAD (any version supporting AutoLISP and DCL)
-- DCL file must be placed at `C:/VLISP/DCL/PROJECT.DCL`
+- DCL file must be placed at `C:/VLISP/DCL/souvenir_generator.DCL`
 
 ## Usage
 
 1. Place both files in the correct locations
 2. In AutoCAD, load the script:
    ```
-   (load "C:/path/to/PROJECT.lsp")
+   (load "C:/path/to/souvenir_generator.lsp")
    ```
 3. Run the command:
    ```
-   Project
+   souvenir_generator
    ```
 4. In the dialog — enter a base diameter (250–500 mm) and select a theme
 5. The model generates automatically in the current drawing
